@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poopins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: url(bg2.jpg) no-repeat;
+    background-position: center;
+    background-size: 1500px;
+}
+
+.logo{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: rgb(255, 253, 253);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before { 
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+h1 {
+    color: #fcf9f7; /* Warna oren */
+    text-align: center;
+}
+
+h2 {
+    margin-top: 120px; /* Atur jarak dari header */
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+img {
+    width: 100px;  /* Ubah sesuai ukuran yang diinginkan */
+    height: auto;  /* Ini akan menjaga proporsi gambar */
+}
+
+
+a {
+    color: #d95f0e;
+    text-decoration: none;
+    size: 30px;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: block; /* Membuat setiap tombol berada di baris baru */
+    margin: 10px 0; /* Jarak antar tombol */
+}
+
+.tombol-jawaban {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #000000; /* Warna biru */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tombol-jawaban:hover {
+    background-color: #3d3d3d; /* Warna biru lebih gelap saat hover */
+}
+
+input[type="radio"] {
+    display: none; /* Menyembunyikan input radio */
+}
+
+label:hover input[type="radio"] + .tombol-jawaban {
+    background-color: #636262; /* Mengubah warna tombol saat hover */
+}
+
+
+
+.hidden {
+    display: none; /* Menyembunyikan elemen dengan kelas "hidden" */
+}
+
+/* Jika ingin menandai jawaban yang benar secara visual, bisa menambahkan kelas berikut */
+input[type="(D) 9"]:checked + .tombol-jawaban {
+    background-color: #28a745; /* Warna hijau untuk jawaban yang benar */
+}
+
+form {
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    display: none; /* Menyembunyikan checkbox */
+}
+
+.pesan {
+    display: none; /* Menyembunyikan pesan secara default */
+    margin-left: 10px;
+}
+
+input[type="checkbox"]:checked + .tombol-jawaban + .pesan {
+    display: inline; /* Menampilkan pesan ketika checkbox dicentang */
+}
+
+input[type="checkbox"]:checked + .tombol-jawaban {
+    background-color: #28a745; /* Warna hijau untuk jawaban yang benar */
+}
+
+.pesan.benar {
+    color: green; /* Warna hijau untuk jawaban benar */
+}
+
+.pesan.salah {
+    color: red; /* Warna merah untuk jawaban salah */
+}
+
+.tombol-jawaban {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF; /* Warna biru */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transisi warna */
+    display: inline-block;
+}
+
+.tombol-jawaban:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+}
+
+.content {
+    margin-top: 10px;
+}
+
+
